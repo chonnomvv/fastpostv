@@ -32,8 +32,18 @@ header {
 }
 
 .btn-login {
-    margin-left: 213px;
+
     font-size: 0.7rem;
+}
+
+.btn-logout{
+    display: none;
+     font-size: 0.7rem;
+}
+
+.sign_up {
+    font-size: 0.7rem;
+    margin-left: 141px;
 }
 
 /*
@@ -167,10 +177,21 @@ li {
 
 li, a {
     display: block;
-    padding-right: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
     text-decoration: none;
     color: black;
     font-size: 10px;
+}
+
+.selected-menu {
+    background: #0d082b;
+    color: #ced4da;
+    border-radius: 8px 8px 0 0;
+}
+
+.selected-menu a:visited {
+    color: #ced4da;
 }
 
 .topDiv {
@@ -330,7 +351,7 @@ li, a {
     font-weight: 300;
 }
 
-.weather{
+.weather {
     margin-left: 170px;
     font-family: inherit;
 }
@@ -468,49 +489,49 @@ a:hover {
     color: black;
     text-decoration: underline;
 }
+
 .carousel-inner {
     left: 15px;
 }
-
-
-
 
 .flip-card {
     background-color: transparent;
     width: 268px;
     height: 280px;
     perspective: 1000px;
-  }
-  
-  .flip-card-inner {
+}
+
+.flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
     transition: transform 1s;
     transform-style: preserve-3d;
-  }
-  
-  .flip-card:hover .flip-card-inner {
+}
+
+.flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-  }
-  
-  .flip-card-front, .flip-card-back {
+}
+
+.flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-  }
-  .flip-card-back {
-    transform: rotateY(180deg);
-  }
+}
 
-  .flip-card-front {
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front {
     background-color: white;
     color: black;
-  }
-  .flip-card-back > img {
-    height: 100%; 
-    width: 100%; 
+}
+
+.flip-card-back > img {
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-  }
+}
