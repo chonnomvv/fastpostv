@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4154b1c5-d199-431b-bbcc-14029da63116" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index_sample.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_sample.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/join-in-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/join-in-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/join-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/join-in.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news.csv" beforeDir="false" afterPath="$PROJECT_DIR$/news.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,8 +17,8 @@
       <file leaf-file-name="index_sample.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index_sample.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="614">
-              <caret line="632" lean-forward="true" selection-start-line="632" selection-end-line="632" />
+            <state relative-caret-position="460">
+              <caret line="463" column="32" lean-forward="true" selection-start-line="463" selection-start-column="32" selection-end-line="463" selection-end-column="32" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -63,8 +58,8 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="599">
-              <caret line="383" selection-start-line="383" selection-end-line="383" />
+            <state relative-caret-position="663">
+              <caret line="387" selection-start-line="387" selection-end-line="387" />
             </state>
           </provider>
         </entry>
@@ -270,8 +265,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="383" selection-start-line="383" selection-end-line="383" />
+        <state relative-caret-position="663">
+          <caret line="387" selection-start-line="387" selection-end-line="387" />
         </state>
       </provider>
     </entry>
@@ -291,8 +286,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index_sample.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="632" lean-forward="true" selection-start-line="632" selection-end-line="632" />
+        <state relative-caret-position="460">
+          <caret line="463" column="32" lean-forward="true" selection-start-line="463" selection-start-column="32" selection-end-line="463" selection-end-column="32" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

@@ -297,6 +297,7 @@ li, a {
     /*border: 1px solid yellowgreen;*/
     width: 20%;
     height: 700px;
+    padding-top: 15px;
 }
 
 .main_left1 {
@@ -308,6 +309,7 @@ li, a {
 .main_left2 {
     /*border: 1px solid cornflowerblue;*/
     height: 350px;
+    padding-top: 13px;
 }
 
 .main_center {
@@ -338,7 +340,8 @@ li, a {
 .main_right {
     /*border: 1px solid yellowgreen;*/
     width: 20%;
-    height: 800px;
+    height: 700px;
+    padding-top: 15px;
 }
 
 .main_right1 {
@@ -350,6 +353,7 @@ li, a {
 .main_right2 {
     /*border: 1px solid cornflowerblue;*/
     height: 350px;
+    padding-top: 13px;
 }
 
 .headline_ipsum {
@@ -530,7 +534,7 @@ a:hover {
 .flip-card {
     background-color: transparent;
     width: 268px;
-    height: 280px;
+    height: 345px;
     perspective: 1000px;
 }
 
