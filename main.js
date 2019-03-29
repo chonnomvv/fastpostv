@@ -60,4 +60,3 @@ var weatherIcon = '';
 $(function () {
     getLocation();
 });
-

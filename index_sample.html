@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+
     <title>The Fast Times</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -183,7 +184,8 @@
                             </article>
                         </div>
                         <div class="flip-card-back">
-                            <img src="https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2019%2F0322%2Fr517942_1296x729_16%2D9.jpg&w=920&h=518&scale=crop&cquality=80&location=origin&format=jpg">
+                            <img id='left1'
+                                 src="https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2019%2F0322%2Fr517942_1296x729_16%2D9.jpg&w=920&h=518&scale=crop&cquality=80&location=origin&format=jpg">
                         </div>
                     </div>
                 </div>
@@ -197,6 +199,7 @@
                             <h5 class="modal-title headline_ipsum1" id="exampleModalScrollableTitle1"></h5>
                         </div>
                         <div class="modal-body main_ipsum1">
+                            <img id="img-modal-1">
 
                         </div>
                         <div class="modal-footer">
@@ -216,7 +219,8 @@
                             </article>
                         </div>
                         <div class="flip-card-back">
-                            <img src="https://a2.espncdn.com/combiner/i?img=%2Fphoto%2F2018%2F0728%2Fr407191_1296x729_16%2D9.jpg&w=920&h=518&scale=crop&cquality=80&location=origin&format=jpg">
+                            <img id='left2'
+                                 src="https://a2.espncdn.com/combiner/i?img=%2Fphoto%2F2018%2F0728%2Fr407191_1296x729_16%2D9.jpg&w=920&h=518&scale=crop&cquality=80&location=origin&format=jpg">
                         </div>
                     </div>
                 </div>
@@ -230,7 +234,7 @@
                             <h5 class="modal-title headline_ipsum2" id="exampleModalScrollableTitle2"></h5>
                         </div>
                         <div class="modal-body main_ipsum2">
-
+                            <img id="img-modal-2">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -319,7 +323,8 @@
                             </article>
                         </div>
                         <div class="flip-card-back">
-                            <img src="https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2019%2F0313%2Fr513943_1296x729_16%2D9.png&w=920&h=518&scale=crop&cquality=80&location=origin&format=jpg">
+                            <img id='left3'
+                                 src="https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2019%2F0313%2Fr513943_1296x729_16%2D9.png&w=920&h=518&scale=crop&cquality=80&location=origin&format=jpg">
                         </div>
                     </div>
                 </div>
@@ -333,6 +338,7 @@
                             <h5 class="modal-title headline_ipsum3" id="exampleModalScrollableTitle3"></h5>
                         </div>
                         <div class="modal-body main_ipsum3">
+                            <img id="img-modal-3">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
@@ -354,7 +360,8 @@
                             </article>
                         </div>
                         <div class="flip-card-back">
-                            <img src="https://a2.espncdn.com/combiner/i?img=%2Fphoto%2F2019%2F0318%2Fr516356_1296x729_16%2D9.jpg&w=920&h=518&scale=crop&cquality=80&location=origin&format=jpg">
+                            <img id='left4'
+                                 src="https://a2.espncdn.com/combiner/i?img=%2Fphoto%2F2019%2F0318%2Fr516356_1296x729_16%2D9.jpg&w=920&h=518&scale=crop&cquality=80&location=origin&format=jpg">
                         </div>
                     </div>
                 </div>
@@ -368,7 +375,9 @@
                             <h5 class="modal-title headline_ipsum4"
                                 id="exampleModalScrollableTitle"></h5>
                         </div>
-                        <div class="modal-body main_ipsum4"></div>
+                        <div class="modal-body main_ipsum4">
+                            <img id="img-modal-4">
+                        </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary"
                                     data-dismiss="modal">Close
@@ -436,16 +445,6 @@
             $("#slide_menu,.page_cover,html").removeClass("open");
         }
     };
-
-    // $(".img_search").click(function(e) {
-    //     e.preventDefault();
-    //     if ($(".headline_search2").hide()) {
-    //     $(".headline_search2").show();
-    //     } else { ($(".headline_search2").show())
-    //     $(".headline_search2").hide();
-    //     }
-    // });
-
     $(".headline_search").on('click', function (e) {
         e.preventDefault();
         if ($('.headline_search2').hasClass('active')) {
@@ -455,14 +454,6 @@
             $('.headline_search2').addClass('active');
         }
     });
-
-    /*
-    $(".img_search").click(function (e) {
-        e.preventDefault();
-        $(".headline_search2").show();
-    });
-    */
-
     <!--슬라이드메뉴 스크립트-->
 
     $(document).ready(function () {
@@ -502,9 +493,7 @@
 
     // 기사 읽어오는 스크립트 시작
     $(document).ready(function () {
-        console.log("csv start");
         $.ajax({
-
             type: "GET",
             url: "./news.csv",
             dataType: "text",
@@ -513,26 +502,37 @@
                 var j = 0;
                 for (var i in allRows) {
 
-                    singleRow = allRows[i].split(",");
+                    var singleRow = allRows[i].split(",");
+
+                    var singleRow_len = singleRow.length;
+
+                    var img_ord = singleRow[singleRow_len - 1];
+
                     var comma = singleRow.length;
-                    // singleRow = JSON.stringify(allRows[i]);
-                    // var comma_count = singleRow.match(",");
-                    // console.log(singleRow[1]);
-                    // if (singleRow.length < 6) {
-                    //     // console.log(singleRow[1]);
-                    //     continue;
-                    // }
                     if (i > 0) {
                         if (singleRow.length == 6) {
-                            // console.log(singleRow);
                             j++;
-                            // console.log(singleRow[1]+singleRow[2])
-                            $(".headline_ipsum" + j).append("<p>" + singleRow[1] + singleRow[2] + "</p>");
-                            $(".main_ipsum" + j).append("<p>" + singleRow[2] + singleRow[3] + singleRow[2] + singleRow[3] + "</p>" + "<br>");
-                            // $("#subContent-a"+i).attr("href", "https://sports.news.naver.com/esports/news/read.nhn?oid=" + singleRow[4] + "&aid=" + singleRow[5]);
-                            // console.log(singleRow)
+                            $(".headline_ipsum" + j).append("<p>" + singleRow[1] + "</p>");
+                            $(".main_ipsum" + j).append("<p>" + singleRow[2] + singleRow[1] + singleRow[2] + "</p>" + "<br>");
                         }
                     }
+                }
+            }
+        })
+        $.ajax({
+            type: "GET",
+            url: "./img_src_data12.txt",
+            dataType: "text",
+            success: function (data) {
+                var imgRows = data.split(",");
+                var j = 0;
+                // var singleImg = imgRows.split(",");
+                console.log(imgRows);
+                for (var i in imgRows) {
+
+                    console.log(imgRows[i]);
+                    $("#img-modal-"+i).attr('src',imgRows[i-1]);
+
                 }
             }
         })
