@@ -599,3 +599,8 @@ a:hover {
     font-size: 12px;
     color: #6d6d6d;
 }
+
+#img-modal-1, #img-modal-2, #img-modal-3, #img-modal-4 {
+    width: 99.7%;
+    margin-bottom: 15px;
+}
