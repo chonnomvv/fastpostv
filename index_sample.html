@@ -13,7 +13,31 @@
     <!--제이쿼리소스-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!--제이쿼리소스끝-->
+
+    <script src="main.js" type="text/javascript"></script>
+    <!--날짜 스크립트-->
+    <script type="text/javascript">
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1; //January is 0!
+        var yyyy = today.getFullYear();
+
+        if (dd < 10) {
+            dd = '0' + dd
+        }
+
+        if (mm < 10) {
+            mm = '0' + mm
+        }
+
+        today = yyyy + '.' + mm + '.' + dd;
+        //dd+ '/' +mm+'/'+yyyy;
+        //document.write(today);
+    </script>
+    <!--날짜 스크립트 끝-->
+
     <script src="./main.js" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -40,70 +64,54 @@
                     <button type="button" class="btn-search btn btn-sm btn-secondary">GO</button>
                 </div>
             </div>
-            <div class="headline_date">오늘 날짜</div>
+
         </div>
 
         <div class="headline_font">
             <h1>The Fast Times</h1>
         </div>
         <div class="headlin_right">
-            <button class="btn-login btn btn-sm btn-secondary" onclick="document.getElementById('signup').style.display='block'">SIGN UP</button>
+            <div class="login">
+                <button type="button" class="btn btn-sm btn-secondary sign_up">Sign Up</button>
+                <button type="button" class="btn-login btn btn-sm btn-secondary">LOG IN</button>
+                <button type="button" class="btn-logout btn btn-sm btn-secondary">LOG OUT</button>
+            </div>
+            <div class="headline_date">
+                <script>document.write(today);</script>
+            </div>
         </div>
     </div>
-
-    <!--sign up modal-->
-    <div id="signup" class="modal">
-        <form class="modal-content" action="/action_page.php">
-          <div class="container">
-            <h1>Sign Up</h1>
-            <p>Please fill in this form to create an account.</p>
-            <hr>
-            <label for="email"><b>E-mail</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
-      
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-      
-            <label for="psw-repeat"><b>Repeat Password</b></label>
-            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-            
-            <label>
-              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-            </label>
-      
-            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a></p>
-      
-            <div class="clearfix">
-              <button type="button" onclick="document.getElementById('signup').style.display='none'" class="cancelbtn">Cancel</button>
-              <button type="submit" class="signupbtn">Sign Up</button>
-            </div>
-          </div>
-        </form>
-      </div>
-
-
+    </div>
     <hr>
     <div class="topMenuDiv">
         <ul class="topMenu">
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Menu</a></li>
+            <li class="menu-tab" id="topMenu0"><a href="#">World</a></li>
+            <li class="menu-tab" id="topMenu1"><a href="#">U.S</a></li>
+            <li class="menu-tab" id="topMenu2"><a href="#">Politics</a></li>
+            <li class="menu-tab" id="topMenu3"><a href="#">N.Y</a></li>
+            <li class="menu-tab" id="topMenu4"><a href="#">Business</a></li>
+            <li class="menu-tab" id="topMenu5"><a href="#">Opinion</a></li>
+            <li class="menu-tab" id="topMenu6"><a href="#">Tech</a></li>
+            <li class="menu-tab" id="topMenu7"><a href="#">Science</a></li>
+            <li class="menu-tab" id="topMenu8"><a href="./index_sample.html">E-Sports</a></li>
+            <li class="menu-tab" id="topMenu9"><a href="#">Health</a></li>
+            <li class="menu-tab" id="topMenu10"><a href="#">Sports</a></li>
+            <li class="menu-tab" id="topMenu11"><a href="#">Arts</a></li>
+            <li class="menu-tab" id="topMenu12"><a href="#">Books</a></li>
+            <li class="menu-tab" id="topMenu13"><a href="#">Style</a></li>
+            <li class="menu-tab" id="topMenu14"><a href="#">Food</a></li>
+            <li class="menu-tab" id="topMenu15"><a href="#">Travel</a></li>
+            <li class="menu-tab" id="topMenu16"><a href="#">Magazine</a></li>
+            <li class="menu-tab" id="topMenu17"><a href="#">Real Estate</a></li>
         </ul>
     </div>
     <br/>
 </header>
+
 <div class="topDiv row">
     <div class="topTopic">
         <div class="topImg">
-            <img
-                    src="https://a.espncdn.com/combiner/i?img=%2Fredesign%2Fassets%2Fimg%2Ficons%2FESPN%2Dicon%2Desports.png&w=80&h=80&scale=crop&cquality=40&location=origin">
+            <img src="https://a.espncdn.com/combiner/i?img=%2Fredesign%2Fassets%2Fimg%2Ficons%2FESPN%2Dicon%2Desports.png&w=80&h=80&scale=crop&cquality=40&location=origin">
         </div>
         <div class="topTopicText">
             <h2><a href="http://www.espn.com/esports/" target="_blank">ESPN e-Sports</a></h2>
@@ -111,6 +119,7 @@
                 nulla non metus auctor fringilla.</p>
         </div>
     </div>
+
     <div class="topTopic">
         <div class="topImg">
             <img
@@ -136,6 +145,7 @@
                 euismod semper.</p>
         </div>
     </div>
+
     <div class="topTopic">
         <!--<div class="exchange">환율</div>-->
         <!--시계 div-->
@@ -158,8 +168,6 @@
             </div>
         </div>
     </div>
-
-
 </div>
 <main>
     <div class="main_div row">
@@ -186,15 +194,10 @@
                 <div class="modal-dialog modal-dialog-scrollable" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalScrollableTitle1 headline_ipsum1">Lorem Ipsum is
-                                simply dummy
-                                text of the printing and typesetting industry.</h5>
+                            <h5 class="modal-title headline_ipsum1" id="exampleModalScrollableTitle1"></h5>
                         </div>
-                        <div class="modal-body">
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                            unknown printer took a galley of type and scrambled it to make a type specimen book. It
-                            has survived not only five centuries, but also the leap into electronic typesetting,
-                            remaining essentially unchanged.
+                        <div class="modal-body main_ipsum1">
+
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -217,33 +220,26 @@
                         </div>
                     </div>
                 </div>
+
             </div>
-            <!-- Modal -->
             <div class="modal fade" id="exampleModalScrollable2" tabindex="-1" role="dialog"
                  aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-scrollable" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalScrollableTitle2">한글입숨</h5>
+                            <h5 class="modal-title headline_ipsum2" id="exampleModalScrollableTitle2"></h5>
                         </div>
-                        <div class="modal-body">
-                            장식하는 소담스러운 이성은 천지는 그들은 용감하고 목숨이 얼마나 곧 있으랴? 가지에 청춘에서만 살았으며, 못할 이상은 열락의 있음으로써 위하여 것이다. 귀는
-                            때에, 착목한는 칼이다. 생명을 날카로우나 천고에 용기가 보이는 광야에서 얼마나 대중을 것이다. 오아이스도 있는 든 인생을 밝은 더운지라 없으면,
-                            철환하였는가?
+                        <div class="modal-body main_ipsum2">
 
-                            수 보이는 이상은 살 약동하다. 품고 능히 어디 것은 아름다우냐? 끝까지 생생하며, 우리 내는 부패뿐이다. 보배를 것은 영락과 실현에 사랑의 눈에 부패를 몸이
-                            꽃 운다. 튼튼하며, 귀는 무엇이 트고, 같이, 끝에 보내는 얼마나 부패뿐이다.
-
-                            따뜻한 그것을 간에 청춘 있으랴? 살 우리는 인생의 청춘 심장은 뿐이다. 새가 그러므로 대한 위하여, 끝까지 부패뿐이다. 피고 시들어 청춘 생생하며, 맺어,
-                            너의 하는 말이다. 되려니와, 부패를 능히 평화스러운 피는 얼마나 것이다.
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </div>
+                    <!--모달끝-->
                 </div>
+                <!--모달끝-->
             </div>
-            <!--모달끝-->
         </div>
         <!--메인 중앙-->
         <div class="main_center">
@@ -265,16 +261,51 @@
                             <h6>What you need to know about the Overwatch League Stage 1 playoffs</h6>
                         </div>
                         <div class="carousel-item">
-                            <iframe width="750" height="422" src="https://www.youtube.com/embed/KHADAte_Csk?controls=0"
+                            <iframe width="750" height="422"
+                                    src="https://www.youtube.com/embed/KHADAte_Csk?controls=0"
                                     frameborder="0"
                                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
-                            <h6>SKT Faker: 'I'd like to win the [LCK] championship again, it's been a while'</h6>
+                            <h6>SKT Faker: 'I'd like to win the [LCK] championship again, it's been a
+                                while'</h6>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="main_center2"></div>
+            <!--<div class="main_center2"></div>-->
+            <div class="main_center2">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="http://e-sports.or.kr/lck" target="_blank">
+                                <img src="http://www.e-sports.or.kr/upload/upload_images/banner//190131094359_banner.jpg"
+                                     class="d-block w-100" alt="2019 스무살우리 LoL 챔피언스 코리아 스프링"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="http://e-games.or.kr/bbs/view.php?p_mbs=003006001&p_mid=1&p_pkid=607&p_code=view"
+                               target="_blank">
+                                <img src="http://www.e-sports.or.kr/upload/upload_images/banner//190319022929_banner.jpg"
+                                     class="d-block w-100" alt="e스포츠 명예의 전당"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="http://e-games.or.kr/bbs/view.php?p_mbs=003006001&p_mid=1&p_pkid=607&p_code=view"
+                               target="_blank">
+                                <img src="http://www.e-sports.or.kr/upload/upload_images/banner//190321041739_banner.jpg"
+                                     class="d-block w-100" alt="공인 e스포츠 PC클럽 배틀그라운드 정규 클럽대회"></a>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                       data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                       data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
         </div>
         <!--메인 오른쪽-->
         <div class="main_right">
@@ -299,28 +330,21 @@
                 <div class="modal-dialog modal-dialog-scrollable" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalScrollableTitle3">별헤는밤</h5>
+                            <h5 class="modal-title headline_ipsum3" id="exampleModalScrollableTitle3"></h5>
                         </div>
-                        <div class="modal-body">
-                            별 이제 우는 나는 별 다 하나에 까닭입니다. 하나의 라이너 무덤 경, 사람들의 벌레는 별 까닭입니다. 풀이 한 오면 별들을 봅니다. 가슴속에 마디씩 차 나는
-                            언덕 까닭이요, 새겨지는 동경과 봅니다. 한 겨울이 노새, 별빛이 이름과, 멀리 불러 봅니다.
-
-                            언덕 소녀들의 없이 있습니다. 이름을 덮어 속의 어머님, 둘 차 듯합니다. 당신은 별들을 겨울이 무성할 가을로 별 듯합니다. 이 된 가난한 마디씩 말 봅니다.
-                            사랑과 부끄러운 노루, 있습니다. 어머니, 노새, 새겨지는 보고, 있습니다.
-
-                            라이너 나는 이름과, 이네들은 무엇인지 애기 계십니다. 경, 덮어 하늘에는 별빛이 버리었습니다. 소녀들의 새겨지는 경, 듯합니다. 아직 딴은 지나고 했던
-                            까닭입니다. 내 남은 시와 딴은 내일 피어나듯이 덮어 멀리 무성할 듯합니다. 별 그리고 별들을 나의 쓸쓸함과 아스라히 듯합니다. 많은 하나에 지나고
-                            버리었습니다.
-
+                        <div class="modal-body main_ipsum3">
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                            </button>
+
                         </div>
                     </div>
                 </div>
             </div>
             <!--모달끝-->
-            <div class="main_right2" data-toggle="modal" data-target="#exampleModalScrollable4">
+            <div class="main_right2" data-toggle="modal"
+                 data-target="#exampleModalScrollable4">
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
@@ -341,21 +365,14 @@
                 <div class="modal-dialog modal-dialog-scrollable" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalScrollableTitle">Why do we use it?</h5>
+                            <h5 class="modal-title headline_ipsum4"
+                                id="exampleModalScrollableTitle"></h5>
                         </div>
-                        <div class="modal-body">
-                            It is a long established fact that a reader will be distracted by the readable content
-                            of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                            more-or-less normal distribution of letters, as opposed to using 'Content here, content
-                            here', making it look like readable English. Many desktop publishing packages and web
-                            page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
-                            ipsum' will uncover many web sites still in their infancy. Various versions have evolved
-                            over the years, sometimes by accident, sometimes on purpose (injected humour and the
-                            like).
-
-                        </div>
+                        <div class="modal-body main_ipsum4"></div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary"
+                                    data-dismiss="modal">Close
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -364,8 +381,50 @@
         </div>
 
     </div>
-
+    </div>
 </main>
+<!--푸터-->
+<footer>
+    <div class="foot_line">
+        <div class="foot_map">
+            <ul>
+                <li>
+                    <a href="#">© 2019 The Fast Times Company</a>
+                </li>
+                <li>
+                    <a href="#">Contact Us</a>
+                </li>
+                <li>
+                    <a href="#">Work with us</a>
+                </li>
+                <li>
+                    <a href="#">Advertise</a>
+                </li>
+                <li>
+                    <a href="#">Your Ad Choices</a>
+                </li>
+                <li>
+                    <a href="#">Privacy</a>
+                </li>
+                <li>
+                    <a href="#">Terms of Service</a>
+                </li>
+                <li>
+                    <a href="#">Terms of Sale</a>
+                </li>
+                <li>
+                    <a href="#">Site Map</a>
+                </li>
+                <li>
+                    <a href="#">Help</a>
+                </li>
+                <li>
+                    <a href="#">Subscriptions</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
 <!--슬라이드메뉴 스크립트-->
 <script>
     $(".headline_list").click(function () {
@@ -378,10 +437,69 @@
         }
     };
 
+    // $(".img_search").click(function(e) {
+    //     e.preventDefault();
+    //     if ($(".headline_search2").hide()) {
+    //     $(".headline_search2").show();
+    //     } else { ($(".headline_search2").show())
+    //     $(".headline_search2").hide();
+    //     }
+    // });
+
+    $(".headline_search").on('click', function (e) {
+        e.preventDefault();
+        if ($('.headline_search2').hasClass('active')) {
+            console.log(11)
+            $('.headline_search2').removeClass('active');
+        } else {
+            $('.headline_search2').addClass('active');
+        }
+    });
+
+    /*
     $(".img_search").click(function (e) {
         e.preventDefault();
         $(".headline_search2").show();
     });
+    */
+
+    /* 슬라이드메뉴 스크립트 */
+
+    $(document).ready(function () {
+        var menu_num = localStorage.getItem("selected-menu");
+        var isLogin = localStorage.getItem("islogin");
+
+        $('.topMenu').find('#' + menu_num).addClass("selected-menu");
+
+        if (isLogin == 'true') {
+            $(".sign_up").css("display", "none");
+            $(".btn-login").css("display", "none");
+            $(".btn-logout").css("display", "block");
+        }
+
+
+    })
+
+    $(".headline_list").click(function () {
+        $("#slide_menu,.page_cover,html").addClass("open");
+        window.location.hash = "#open";
+    });
+    window.onhashchange = function () {
+        if (location.hash != "#open") {
+            $("#slide_menu,.page_cover,html").removeClass("open");
+        }
+    };
+
+    $(".img_search").click(function (e) {
+        e.preventDefault();
+        // $(".headline_search2").show();
+        if ($(".headline_search2").css("display") == 'none') {
+            $(".headline_search2").css("display", "block");
+        } else if ($(".headline_search2").css("display") == "block") {
+            $(".headline_search2").css("display", "none");
+        }
+    });
+
     // 기사 읽어오는 스크립트 시작
     $(document).ready(function () {
         console.log("csv start");
@@ -476,31 +594,42 @@
         new Clock(clocks[i]);
     }
 
-// sign up modal
-var modal = document.getElementById('signup');
+    $('.menu-tab').on('click', function () {
+        $('.menu-tab').removeClass('selected-menu');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+        $(this).addClass("selected-menu")
+
+        var menu_num = $(this).attr('id');
+        localStorage.setItem("selected-menu", menu_num);
+    })
+
+    $(".sign_up").on("click", function () {
+        var popupX = (window.screen.width / 2) - (315 / 2);
+
+        var popupY = (window.screen.height / 2) - (703 / 2);
+
+        window.open('./join-in.html', '', 'status=no, height=703, width=315, left=' + popupX + ', top=' + popupY + ', screenX=' + popupX + ', screenY= ' + popupY);
+    })
+
+    $(".btn-login").on("click", function () {
+        var popupX = (window.screen.width / 2) - (315 / 2);
+
+        var popupY = (window.screen.height / 2) - (400 / 2);
+        window.open('./join-in-2.html', '', 'status=no, height=400, width=315, left=' + popupX + ', top=' + popupY + ', screenX=' + popupX + ', screenY= ' + popupY);
+    })
+
+    $(".btn-logout").on("click", function () {
+        localStorage.setItem("islogin", false);
+        window.location.reload();
+    })
 
 </script>
-<!--슬라이드 메뉴 스크립트끝-->
-
-<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"-->
-<!--integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"-->
-<!--crossorigin="anonymous"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-<script>
 
-</script>
 </body>
-
 </html>
